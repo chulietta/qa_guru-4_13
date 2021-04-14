@@ -12,16 +12,11 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static ru.alfabank.helpers.AttachmentsHelper.*;
 
-public class WebTestLifeCycleExtension implements BeforeAllCallback, AfterEachCallback, BeforeEachCallback {
+public class WebTestLifeCycleExtension implements BeforeAllCallback, AfterEachCallback {
 
     @Override
     public void beforeAll(ExtensionContext context) {
         getFactory().createDriver().init();
-    }
-
-    @Override
-    public void beforeEach(ExtensionContext context) {
-        open("everyday/debit-cards/");
     }
 
     @Override
