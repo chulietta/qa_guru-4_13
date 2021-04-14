@@ -1,5 +1,6 @@
 package ru.alfabank.tests;
 
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,7 @@ import static io.qameta.allure.Allure.step;
 public class DebitCardsPageTests {
 
     @Test
+    @Feature("Загрузка страницы")
     @DisplayName("Debit cards page should be loaded")
     void debitCardsPageHeaderTest() {
         step("Проверка заголовка страницы дебетовых карт", () -> {
@@ -25,6 +27,7 @@ public class DebitCardsPageTests {
     }
 
     @Test
+    @Feature("Загрузка блока дебетовых карт")
     @DisplayName("Debit cards page should be loaded")
     void debitCardBlocksLoadedTest() {
         step("Проверка количества дебетовых карт на странице", () -> {
@@ -46,6 +49,7 @@ public class DebitCardsPageTests {
     }
 
     @Test
+    @Feature("Просмотр архивных карт")
     @DisplayName("Check archive cards link")
     void archiveCardsLinkTest() {
         step("Проверка перехода по ссылке в архивные карты", () -> {
@@ -56,6 +60,7 @@ public class DebitCardsPageTests {
     }
 
     @Test
+    @Feature("Загрузка блока страхования")
     @DisplayName("Benefits block should be loaded")
     void benefitsBlockLoadedTest() {
         step("Проверка загрузки блока страхования", () -> {
@@ -64,6 +69,7 @@ public class DebitCardsPageTests {
     }
 
     @Test
+    @Feature("Загрузка блока SEO")
     @DisplayName("SEO block should be loaded")
     void seoBlockLoadedTest() {
         step("Проверка загрузки блока SEO", () -> {
@@ -72,6 +78,7 @@ public class DebitCardsPageTests {
     }
 
     @Test
+    @Feature("Фильтрация карт")
     @DisplayName("Check Premium filter")
     void premiumFilterTest() {
         step("Нажать на пункт Premium ", () -> {
@@ -86,6 +93,7 @@ public class DebitCardsPageTests {
     }
 
     @Test
+    @Feature("Фильтрация карт")
     @DisplayName("Check trip filter")
     void tripFilterTest() {
         step("Нажать на пункт Для путешествий", () -> {
@@ -101,6 +109,7 @@ public class DebitCardsPageTests {
     }
 
     @Test
+    @Feature("Фильтрация карт")
     @DisplayName("Check shopping filter")
     void shoppingFilterTest() {
         step("Нажать на пункт Для покупок", () -> {
