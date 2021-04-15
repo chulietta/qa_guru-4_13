@@ -18,8 +18,8 @@ import static io.qameta.allure.Allure.step;
 public class DebitCardsPageTests {
 
     @Test
-    @Story("Проверка страницы дебетовых карт")
     @Feature("Загрузка страницы")
+    @Story("Проверка загрузки заголовка страницы")
     @DisplayName("Debit cards page should be loaded")
     void debitCardsPageHeaderTest() {
         step("Открыть страницу дебетовых карт", () ->
@@ -31,8 +31,8 @@ public class DebitCardsPageTests {
     }
 
     @Test
-    @Story("Проверка страницы дебетовых карт")
-    @Feature("Блок дебетовых карт")
+    @Feature("Загрузка страницы")
+    @Story("Проверка загрузки блока  дебетовых карт")
     @DisplayName("Debit cards page should be loaded")
     void debitCardBlocksLoadedTest() {
         step("Открыть страницу дебетовых карт", () ->
@@ -57,8 +57,8 @@ public class DebitCardsPageTests {
     }
 
     @Test
-    @Story("Переход по ссылке")
     @Feature("Ссылка на страницу архивных карт")
+    @Story("Переход по ссылке")
     @DisplayName("Check archive cards link")
     void archiveCardsLinkTest() {
         step("Открыть страницу дебетовых карт", () ->
@@ -74,8 +74,8 @@ public class DebitCardsPageTests {
     }
 
     @Test
-    @Story("Проверка страницы дебетовых карт")
-    @Feature("Блок страхования")
+    @Feature("Загрузка страницы")
+    @Story("Проверка загрузки блока страхования")
     @DisplayName("Benefits block should be loaded")
     void benefitsBlockLoadedTest() {
         step("Открыть страницу дебетовых карт", () ->
@@ -87,8 +87,8 @@ public class DebitCardsPageTests {
     }
 
     @Test
-    @Story("Проверка страницы дебетовых карт")
-    @Feature("Блок SEO")
+    @Feature("Загрузка страницы")
+    @Story("Проверка загрузки блока SEO")
     @DisplayName("SEO block should be loaded")
     void seoBlockLoadedTest() {
         step("Открыть страницу дебетовых карт", () ->
@@ -100,8 +100,8 @@ public class DebitCardsPageTests {
     }
 
     @Test
-    @Story("Проверка фильтрации дебетовых карт")
     @Feature("Фильтрация карт")
+    @Story("Фильтрация по Premium")
     @DisplayName("Check Premium filter")
     void premiumFilterTest() {
         step("Открыть страницу дебетовых карт", () ->
@@ -119,8 +119,8 @@ public class DebitCardsPageTests {
     }
 
     @Test
-    @Story("Проверка фильтрации дебетовых карт")
     @Feature("Фильтрация карт")
+    @Story("Фильтрация для путешествия ")
     @DisplayName("Check trip filter")
     void tripFilterTest() {
         step("Открыть страницу дебетовых карт", () ->
@@ -139,8 +139,8 @@ public class DebitCardsPageTests {
     }
 
     @Test
-    @Story("Проверка фильтрации дебетовых карт")
     @Feature("Фильтрация карт")
+    @Story("Фильтрация для покупок")
     @DisplayName("Check shopping filter")
     void shoppingFilterTest() {
         step("Открыть страницу дебетовых карт", () ->
