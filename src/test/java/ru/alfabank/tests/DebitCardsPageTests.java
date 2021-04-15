@@ -1,5 +1,6 @@
 package ru.alfabank.tests;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
@@ -155,6 +156,24 @@ public class DebitCardsPageTests {
             $("#yandex h2").shouldHave(text("Яндекс.Плюс"));
             $("#pyaterochka h2").shouldHave(text("Пятёрочка"));
             $("#perekrestok h2").shouldHave(text("Перекрёсток"));
+        });
+    }
+
+    @AllureId("2320")
+    @Test
+    @Feature("Карточка дебетовой карты Альфа-Карта")
+    @Story("Открыть форму заказа Альфа-карты")
+    @DisplayName("Order form should be loaded\n")
+    void orderFormTest() {
+        step("Открыть страницу дебетовых карт", () ->
+                open("everyday/debit-cards/")
+        );
+        step("Кликнуть на кнопку \"Заказать карту\"", () ->
+                $("#alfacard-benefit").$(byText("Заказать карту")).click()
+        );
+        step("Проверить, что открылась форма заказа", () -> {
+            $("#h1").shouldHave(text("Заявка на дебетовую Альфа-Карту"));
+            $("#ApplyCardForm").shouldBe(visible);
         });
     }
 }
