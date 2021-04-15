@@ -172,7 +172,7 @@ public class DebitCardsPageTests {
                 $("#alfacard-benefit").$(byText("Заказать карту")).click()
         );
         step("Проверить, что открылась форма заказа", () -> {
-            $("#h1").shouldHave(text("Заявка на дебетовую Альфа-Карту"));
+            $("h1").shouldHave(text("Заявка на дебетовую Альфа-Карту"));
             $("#ApplyCardForm").shouldBe(visible);
         });
     }
