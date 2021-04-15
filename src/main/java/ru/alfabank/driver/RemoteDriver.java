@@ -21,6 +21,5 @@ public class RemoteDriver implements DriverProvider {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = WEB_CONFIG.getRemoteUrl();
-        //Configuration.remote = System.getProperty("remote_driver_url");
     }
 }
