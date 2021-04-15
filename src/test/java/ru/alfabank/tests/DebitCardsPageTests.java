@@ -23,12 +23,12 @@ public class DebitCardsPageTests {
     @Story("Проверка загрузки заголовка страницы")
     @DisplayName("Debit cards page should be loaded")
     void debitCardsPageHeaderTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
-        step("Проверить заголовок страницы дебетовых карт", () ->
-                $("h1").shouldHave(text("Дебетовые карты"))
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
+        step("Проверить заголовок страницы дебетовых карт", () -> {
+            $("h1").shouldHave(text("Дебетовые карты"));
+        });
     }
 
     @Test
@@ -36,12 +36,12 @@ public class DebitCardsPageTests {
     @Story("Проверка загрузки блока  дебетовых карт")
     @DisplayName("Debit cards page should be loaded")
     void debitCardBlocksLoadedTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
-        step("Проверить количества дебетовых карт на странице", () ->
-                $$("#all-cards h2").shouldHaveSize(12)
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
+        step("Проверить количества дебетовых карт на странице", () -> {
+            $$("#all-cards h2").shouldHaveSize(12);
+        });
         step("Проверить корректность загруженных карт", () -> {
             $("#alfacard-benefit h2").shouldHave(text("Альфа-Карта"));
             $("#alfacard-premium h2").shouldHave(text("Альфа-Карта Premium"));
@@ -62,16 +62,16 @@ public class DebitCardsPageTests {
     @Story("Переход по ссылке")
     @DisplayName("Check archive cards link")
     void archiveCardsLinkTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
         step("Нажать на ссылку Архивные карты", () -> {
             $("#archive-link a").shouldHave(href("/everyday/debit-cards-archive/"));
             $("#archive-link").$(byText("Архивные карты")).click();
         });
-        step("Проверить переход по ссылке в архивные карты", () ->
-                $("h1").shouldHave(text("Архивные карты"))
-        );
+        step("Проверить переход по ссылке в архивные карты", () -> {
+            $("h1").shouldHave(text("Архивные карты"));
+        });
     }
 
     @Test
@@ -79,12 +79,12 @@ public class DebitCardsPageTests {
     @Story("Проверка загрузки блока страхования")
     @DisplayName("Benefits block should be loaded")
     void benefitsBlockLoadedTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
-        step("Проверка загрузки блока страхования", () ->
-                $("#benefit h3").shouldHave(text("Все деньги застрахованы"))
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
+        step("Проверка загрузки блока страхования", () -> {
+            $("#benefit h3").shouldHave(text("Все деньги застрахованы"));
+        });
     }
 
     @Test
@@ -92,12 +92,12 @@ public class DebitCardsPageTests {
     @Story("Проверка загрузки блока SEO")
     @DisplayName("SEO block should be loaded")
     void seoBlockLoadedTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
-        step("Проверка загрузки блока SEO", () ->
-                $("#seo-text").shouldBe(visible)
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
+        step("Проверка загрузки блока SEO", () -> {
+            $("#seo-text").shouldBe(visible);
+        });
     }
 
     @Test
@@ -105,12 +105,12 @@ public class DebitCardsPageTests {
     @Story("Фильтрация по Premium")
     @DisplayName("Check Premium filter")
     void premiumFilterTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
-        step("Нажать на пункт фильтра Premium ", () ->
-                $("[data-test-id=tabs-list-tabTitle-1]").click()
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
+        step("Нажать на пункт фильтра Premium ", () -> {
+            $("[data-test-id=tabs-list-tabTitle-1]").click();
+        });
         step("Проверить количество и заголовки отфильтрованных карт", () -> {
             $$("#premium-cards h2").shouldHaveSize(3);
             $("#alfacard-premium h2").shouldHave(text("Альфа-Карта Premium"));
@@ -124,12 +124,12 @@ public class DebitCardsPageTests {
     @Story("Фильтрация для путешествия ")
     @DisplayName("Check trip filter")
     void tripFilterTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
-        step("Нажать на пункт Для путешествий", () ->
-                $("[data-test-id=tabs-list-tabTitle-2]").click()
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
+        step("Нажать на пункт Для путешествий", () -> {
+            $("[data-test-id=tabs-list-tabTitle-2]").click();
+        });
         step("Проверить количество и заголовки отфильтрованных карт", () -> {
             $$("#travel-cards h2").shouldHaveSize(4);
             $("#alfa-travel h2").shouldHave(text("Alfa Travel"));
@@ -144,12 +144,12 @@ public class DebitCardsPageTests {
     @Story("Фильтрация для покупок")
     @DisplayName("Check shopping filter")
     void shoppingFilterTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
-        step("Нажать на пункт Для покупок", () ->
-                $("[data-test-id=tabs-list-tabTitle-3]").click()
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
+        step("Нажать на пункт Для покупок", () -> {
+            $("[data-test-id=tabs-list-tabTitle-3]").click();
+        });
         step("Проверить количество и заголовки отфильтрованных карт", () -> {
             $$("#shopping-cards h2").shouldHaveSize(4);
             $("#alfacard-benefit h2").shouldHave(text("Альфа-Карта"));
@@ -165,12 +165,12 @@ public class DebitCardsPageTests {
     @Story("Открыть форму заказа Альфа-карты")
     @DisplayName("Order form should be loaded\n")
     void orderFormTest() {
-        step("Открыть страницу дебетовых карт", () ->
-                open("everyday/debit-cards/")
-        );
-        step("Кликнуть на кнопку \"Заказать карту\"", () ->
-                $("#alfacard-benefit").$(byText("Заказать карту")).click()
-        );
+        step("Открыть страницу дебетовых карт", () -> {
+            open("everyday/debit-cards/");
+        });
+        step("Кликнуть на кнопку \"Заказать карту\"", () -> {
+            $("#alfacard-benefit").$(byText("Заказать карту")).click();
+        });
         step("Проверить, что открылась форма заказа", () -> {
             $("h1").shouldHave(text("Заявка на дебетовую Альфа-Карту"));
             $("#ApplyCardForm").shouldBe(visible);
