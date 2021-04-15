@@ -34,7 +34,7 @@ public class DebitCardsPageTests {
     @Test
     @Feature("Загрузка страницы")
     @Story("Проверка загрузки блока  дебетовых карт")
-    @DisplayName("Debit cards page should be loaded")
+    @DisplayName("Debit cards block should be loaded")
     void debitCardBlocksLoadedTest() {
         step("Открыть страницу дебетовых карт", () -> {
             open("everyday/debit-cards/");
